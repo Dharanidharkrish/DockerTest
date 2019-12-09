@@ -5,9 +5,7 @@ pipeline{
         stage ('Docker commands')
           {
             steps{ 
-                   sh 'ssh -t -i /var/lib/jenkins/.ssh/id_rsa docadmin@172.31.38.18'
-                   sh '1234'
-                   sh 'sudo docker run -p 8080:8080 dharanidharkrish/devopsexample'
+                   sh 'ssh -t -i /var/lib/jenkins/.ssh/id_rsa docadmin@172.31.38.18 "sudo docker run -p 8080:8080 dharanidharkrish/devopsexample"'                 
                   }
           }
       }
